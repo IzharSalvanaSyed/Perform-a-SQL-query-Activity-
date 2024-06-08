@@ -48,7 +48,7 @@ The output returns all the contents of the machines table:
 
 Next, you want to focus on the email client running on various devices.
 
-- Run the following query to select only the device_id and email_client columns from the machines table.
+- Run the following query to select only the device_id and email_client columns from the machines table.  
 `SELECT device_id, email_client FROM machines;`
 
 What email client is returned in the third row?  
@@ -73,7 +73,7 @@ What email client is returned in the third row?
 
 Now, you need information on the operating systems used on various devices and their last patch date.
 
-- Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table.
+- Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table.  
 `SELECT device_id, operating_system, OS_patch_date FROM machines;`
 
 What is the patch date of the first entry?
@@ -102,7 +102,7 @@ You need to analyze the information from the log_in_attempts table to determine 
 
 First, you need to investigate the locations where login attempts were made to ensure that they’re in expected areas (the United States, Canada, or Mexico).
 
-- Write a SQL query to select the event_id and country columns from the log_in_attempts table.
+- Write a SQL query to select the event_id and country columns from the log_in_attempts table.  
 `SELECT event_id, country FROM log_in_attempts;`
 
 Were any login attempts made from Australia?
