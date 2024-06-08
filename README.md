@@ -73,7 +73,8 @@ What email client is returned in the third row?
 
 Now, you need information on the operating systems used on various devices and their last patch date.
 
-- Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table. Replace X, Y, and Z with the columns that you need to return:
+- Complete the query to return only the device_id, operating_system, and OS_patch_date columns from the machines table.
+`SELECT device_id, operating_system, OS_patch_date FROM machines;`
 
 What is the patch date of the first entry?
 
@@ -97,4 +98,39 @@ What is the patch date of the first entry?
 - 2021-09-01
 
 ## Investigate login activity <a name="investigate">
+You need to analyze the information from the log_in_attempts table to determine if any unusual activity has occurred.
 
+First, you need to investigate the locations where login attempts were made to ensure that they’re in expected areas (the United States, Canada, or Mexico).
+
+- Write a SQL query to select the event_id and country columns from the log_in_attempts table.
+`SELECT event_id, country FROM log_in_attempts;`
+
+Were any login attempts made from Australia?
+
+    +----------+---------+
+    | event_id | country |
+    +----------+---------+
+    |        1 | CAN     |
+    |        2 | CAN     |
+    |        3 | USA     |
+    |        4 | USA     |
+    |        5 | CANADA  |
+    |        6 | MEXICO  |
+    |        7 | CAN     |
+    |        8 | US      |
+    |        9 | MEX     |
+    |       10 | CANADA  |
+    |       11 | CANADA  |
+    |       12 | USA     |
+    |       13 | USA     |
+    |       14 | US      |
+    |       15 | USA     |
+    |       16 | CAN     |
+    |       17 | USA     |
+    |       18 | US      |
+    |       19 | US      |
+    |       20 | MEXICO  |  
+
+Next, you need to check if login attempts were made outside of the organization's working hours.
+
+- Write a SQL query that selects the username, login_date, and login_time columns from the log_in_attempts table.
